@@ -65,6 +65,6 @@
     "lint": "next-hashicorp lint",
     "start": "rm -rf .next/cache/next-babel-loader/ && next dev",
     "static": "npm run build && npm run export && cp _redirects out/.",
-    "linkcheck": "linkcheck https://consul.io"
+    "linkcheck": "linkcheck http://cwiseman13.github.io"
   }
 }

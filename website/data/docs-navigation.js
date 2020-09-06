@@ -12,18 +12,7 @@ export default [
     content: [
       {
         category: 'vs',
-        content: [
-          'zookeeper',
-          'chef-puppet',
-          'nagios-sensu',
-          'skydns',
-          'smartstack',
-          'serf',
-          'eureka',
-          'istio',
-          'proxies',
-          'custom',
-        ],
+        content: ['proxies', 'custom'],
       },
     ],
   },
@@ -31,7 +20,7 @@ export default [
   {
     category: 'install',
     content: [
-      { title: 'Consul Agent', href: '/docs/agent' },
+      { title: 'Sonrai Foo', href: '/docs/agent' },
       'glossary',
       'ports',
       'bootstrapping',
@@ -39,11 +28,6 @@ export default [
       'performance',
       { title: 'Kubernetes', href: '/docs/k8s' },
     ],
-  },
-  {
-    category: 'discovery',
-    name: 'Service Discovery',
-    content: ['services', 'dns', 'checks'],
   },
 
   {
@@ -177,44 +161,7 @@ export default [
       'telemetry',
     ],
   },
-  {
-    category: 'security',
-    content: [
-      {
-        category: 'acl',
-        content: [
-          'acl-system',
-          'acl-rules',
-          'acl-legacy',
-          'acl-migrate-tokens',
-          { category: 'auth-methods', content: ['kubernetes', 'jwt', 'oidc'] },
-        ],
-      },
-      'encryption',
-    ],
-  },
-  {
-    category: 'enterprise',
-    content: [
-      'audit-logging',
-      'backups',
-      'upgrades',
-      'read-scale',
-      {
-        title: 'Single sign-on - OIDC',
-        href: '/docs/security/acl/auth-methods/oidc',
-      },
-      'redundancy',
-      'federation',
-      'namespaces',
-      'network-segments',
-      'sentinel',
-    ],
-  },
-  {
-    category: 'architecture',
-    content: ['anti-entropy', 'consensus', 'gossip', 'jepsen', 'coordinates'],
-  },
+
   'partnerships',
   'download-tools',
   {

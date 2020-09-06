@@ -7,21 +7,19 @@ description: |-
   from source or run on Kubernetes. This page details these methods.
 ---
 
-# Install Consul
+# What is Sonrai Public Cloud Security Platform?
 
-Installing Consul is simple. There are three approaches to installing Consul:
+Sonrai Public Cloud Security Platform (Sonrai Platform) service provides a comprehensive view of data,identity,
+protection, and infrastructure across all your Cloud Accounts. The service collects intelligence frommultiple cloud
+platforms, providing a standard view across these environments of the data & identityrelationships.
 
-1. Using a [precompiled binary](#precompiled-binaries)
+Our goal is to reduce risk in multi-cloud environments, provide efficient cloud identity & datamonitoring,
+identify potential data exposure points and provide compliance perspective across cloudinfrastructure,
+independent of cloud platforms.Sonrai is a cloud-based SaaS service that deploys a workload into your cloud account,
+continually collectsintelligence and reports this intelligence data back to Sonrai for analysis.
 
-1. Installing [from source](#compiling-from-source)
-
-1. Installing [on Kubernetes](/docs/platform/k8s/run)
-
-Downloading a precompiled binary is easiest, and we provide downloads over TLS
-along with SHA256 sums to verify the binary. We also distribute a PGP signature
-with the SHA256 sums that can be verified.
-
-The [Getting Started guides](https://learn.hashicorp.com/tutorials/consul/get-started-install?utm_source=consul.io&utm_medium=docs) provide a quick walkthrough of installing and using Consul on your local machine.
+Monitoring of ongoing cloud and resource level audit allows Sonrai to monitor cloud activity for changes and build
+a comprehensive view ofinformation in your cloud accounts.
 
 ## Precompiled Binaries
 
@@ -35,6 +33,19 @@ additional files, if any, aren't required to run Consul.
 
 Copy the binary to anywhere on your system. If you intend to access it from the
 command-line, make sure to place it somewhere on your `PATH`.
+
+```hcl
+connect {
+    enabled = true
+    ca_provider = "vault"
+    ca_config {
+        address = "http://localhost:8213"
+        token = "..."
+        root_pki_path = "connect-root"
+        intermediate_pki_path = "connect-intermediate"
+    }
+}
+```
 
 ## Compiling from Source
 
@@ -75,6 +86,8 @@ it is on your PATH or you may get an error about Consul not being found.
 ```shell-session
 $ consul -v
 ```
+
+[![Consul Architecture](/img/consul_ecosystem_diagram.png)](/img/consul_ecosystem_diagram.png)
 
 ## Browser Compatibility Considerations
 
