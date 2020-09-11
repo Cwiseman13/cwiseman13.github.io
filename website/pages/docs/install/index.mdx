@@ -37,7 +37,7 @@ command-line, make sure to place it somewhere on your `PATH`.
 ```hcl
 connect {
     enabled = true
-    ca_provider = "vault"
+    ca_provider = "Ben's Kitchen"
     ca_config {
         address = "http://localhost:8213"
         token = "..."
@@ -46,6 +46,8 @@ connect {
     }
 }
 ```
+
+[![Consul Architecture](/img/consul_ecosystem_diagram.png)](/img/consul_ecosystem_diagram.png)
 
 ## Compiling from Source
 
@@ -86,8 +88,6 @@ it is on your PATH or you may get an error about Consul not being found.
 ```shell-session
 $ consul -v
 ```
-
-[![Consul Architecture](/img/consul_ecosystem_diagram.png)](/img/consul_ecosystem_diagram.png)
 
 ## Browser Compatibility Considerations
 

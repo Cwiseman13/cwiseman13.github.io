@@ -17,7 +17,7 @@ export default function HomePage() {
         links={[
           {
             text: 'Read the Docs',
-            url: 'https://learn.hashicorp.com/consul',
+            url: '/docs',
             type: 'outbound',
           },
           {
@@ -38,13 +38,15 @@ export default function HomePage() {
         heading="Why Sonrai?"
         features={[
           {
-            title: 'Eliminate All Identity Risks. Get to Least Privilege and Stay There',
+            title:
+              'Eliminate All Identity Risks. Get to Least Privilege and Stay There',
             content:
               'Quickly deploy Consul on Kubernetes leveraging Helm. Automatically inject sidecars for Kubernetes resources. Federate multiple clusters into a single service mesh.',
             icon: require('./img/why-consul/kubernetes.svg'),
           },
           {
-            title: 'Discover, Classify, Lock Down, and Monitor “Crown-Jewel” Data',
+            title:
+              'Discover, Classify, Lock Down, and Monitor “Crown-Jewel” Data',
             content:
               'Inside Sonrai Dig, our critical resource monitor relentlessly monitors your critical data sitting inside object stores (e.g. AWS S3, Azure Blob) and database services (e.g. CosmosDB, DynamoDB, RDS). Suspicious access activity or undesirable changes in access rights are flagged.',
             icon: require('./img/why-consul/service-mesh-runtime.svg'),
@@ -56,11 +58,12 @@ export default function HomePage() {
             icon: require('./img/why-consul/dynamic-load-balancing.svg'),
           },
           {
-            title: 'Governance Automation Engine Helps Companies Shift Left and Integrate Teams',
+            title:
+              'Governance Automation Engine Helps Companies Shift Left and Integrate Teams',
             content:
               'Sonrai Dig’s Governance Automation Engine helps companies shift left and integrate teams via organized analysis, alerts, and actions that align with how your organizations use public cloud.',
             icon: require('./img/why-consul/cloud.svg'),
-          }
+          },
         ]}
       />
 
@@ -197,32 +200,37 @@ export default function HomePage() {
         ]}
       />
 
-      <section id="cloud-offerings" className="cloud-offerings g-grid-container">
-        <h2 className="g-type-display-2">Learn more about Consul cloud offerings</h2>
+      <section
+        id="cloud-offerings"
+        className="cloud-offerings g-grid-container"
+      >
+        <h2 className="g-type-display-2">
+          Learn more about Consul cloud offerings
+        </h2>
         <CloudOfferingsList
           offerings={[
             {
               image: require('./img/cloud/hcs.jpg?url'),
-              eyebrow: "General Availability",
-              title: "HashiCorp Consul Service on Azure",
-              description: "Native Azure Experience",
+              eyebrow: 'General Availability',
+              title: 'HashiCorp Consul Service on Azure',
+              description: 'Native Azure Experience',
               link: {
-                text: "Get Started",
-                url: "https://learn.hashicorp.com/consul/hcs-azure/deploy",
-                type: "outbound"
-              }
+                text: 'Get Started',
+                url: 'https://learn.hashicorp.com/consul/hcs-azure/deploy',
+                type: 'outbound',
+              },
             },
             {
               image: require('./img/cloud/hcp.jpg?url'),
-              eyebrow: "Private Beta",
-              title: "HCP Consul on AWS",
-              description: "HashiCorp Cloud Platform",
+              eyebrow: 'Private Beta',
+              title: 'HCP Consul on AWS',
+              description: 'HashiCorp Cloud Platform',
               link: {
-                text: "Request Access",
-                url: "https://www.hashicorp.com/cloud-platform/request-access/",
-                type: "outbound"
-              }
-            }
+                text: 'Request Access',
+                url: 'https://www.hashicorp.com/cloud-platform/request-access/',
+                type: 'outbound',
+              },
+            },
           ]}
         />
       </section>
